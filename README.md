@@ -19,8 +19,8 @@ como árvores e grafos. Por isso você deve focar no conhecimento profundo de es
 
 1. Lista (List) ou Vetor (Vector)
 2. Lista Duplamente Ligada (Double Linked List - Dequeue)
-3. Dicionário (Dict) ou Mapa (Map)
-4. Conjunto (Set)
+3. Conjunto (Set)
+4. Dicionário (Dict) ou Mapa (Map)
 
 A primeira camada é saber quais problemas podem ser resolvidos com essas estruturas de forma simples e eficiente.
 Mais importante ainda saber quando não utilizar essas estruturas.
@@ -126,7 +126,7 @@ A lista duplamente ligada não é eficiente para acesso a elementos próximos ao
 
 Por fim, existe uma operação ineficiente para listas duplamente ligadas e listas comuns, confira a seguir.
 
-### Quando não usar Lista comum ou Duplamente Ligada
+#### Quando não usar Lista comum ou Duplamente Ligada
 
 Ambos listas, a comum e a duplamente ligada, são ineficiente para a operação de pertencimento. 
 Ou seja, para chegar se um elemento está contido nela ou não. Confira a seguir:
@@ -150,7 +150,130 @@ False
 
 ```
 
-É muito comum existerem problemas onde é necessário manter a memória de passos já realizados. Para esses casos, deve se
-evitar usar listas. Nesse caso, melhor usar conjuntos, confira a seguir
+É muito comum existirem problemas onde é necessário manter a memória de passos já realizados. Para esses casos, deve se
+evitar usar listas. Nesse caso, melhor usar conjuntos, confira a seguir.
+
+### Conjunto (Set)
+
+Conjuntos, também chamados de hash sets em algumas liguagens, são muito eficientes para remoção e adição de elementos.
+São também extremamente rápidos para operação de pertencimento de elementos.
+Eles são parecidos com os conjuntos estudados em matemática e por isso não permitem elementos repetidos. 
+Confira as operações eficientes:
+
+```python
+>>> conjunto = set() # Criação de conjunto vazio
+>>> conjunto
+set()
+>>> 1 in conjunto # Operação de pertencimento é eficiente
+False
+>>> conjunto.add(1) # Adição de elementos é eficiente
+>>> conjunto
+{1}
+>>> 1 in conjunto
+True
+>>> conjunto.update(range(10)) # Adiição de múltiplos elementos é eficiente e não permite duplicatas, só possui 1 uma vez
+>>> conjunto
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+>>> conjunto.add(1)  # Mesmo com adição de elemento, não permite repetição
+>>> conjunto
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+>>> 1 in conjunto
+True
+>>> conjunto.remove(1) # Eficiente para remoção de elementos
+>>> conjunto
+{0, 2, 3, 4, 5, 6, 7, 8, 9}
+
+```
+
+Apesar de conjuntos serem exclentes para se manter backtracking, não permitem acesso a elementos por índices.
+
+#### Quando não usar conjuntos
+
+Conjuntos não são ordenados em muitas linguagens. Por isso não permite acesso por índice. 
+Por isso devem ser evitados em problemas de acesso a elementos contíguos ou com ordenação. Confira:
+
+```python
+>>> conjunto =set(range(5))
+>>> conjunto
+{0, 1, 2, 3, 4}
+>>> conjunto[0] # Não permite acesso por índice
+Traceback (most recent call last):
+  ...
+TypeError: 'set' object is not subscriptable
+>>> for elemento in conjunto: print(elemento) # Mas é possível iterar sobre os elementos
+0
+1
+2
+3
+4
+
+```
+
+Algumas vezes precisamos conectar elementos a respectivos valores e o conjunto não resolve esse problema. 
+Para esse caso devemos usar dicionários, confira a seguir.
+
+### Dicionário (Dict) ou Mapa (Map)
+
+Dicionários, também chamados de mapas ou hash maps, servem para conectar elementos únicos (chaves) a valores.
+Em termos de eficiencia de operações, funcionam exatamente como conjuntos, confira a seguir:
+
+```python
+>>> frutas ={'banana': 12.50, 'laranja': 1.50, 'uva': 1.20} # Criação de dicionário
+>>> frutas['banana'] # Acesso a elemento de forma eficiente, retornando respectivo preço
+12.5
+>>> frutas['laranja']
+1.5
+>>> frutas['uva']
+1.2
+>>> frutas['abacaxi'] = 2.50 # Adicionando elemento de forma eficiente
+>>> frutas
+{'banana': 12.5, 'laranja': 1.5, 'uva': 1.2, 'abacaxi': 2.5}
+>>> frutas['abacaxi'] = 3.75 # alterando valor de forma eficiente
+>>> frutas
+{'banana': 12.5, 'laranja': 1.5, 'uva': 1.2, 'abacaxi': 3.75}
+>>> del frutas['abacaxi'] # Removendo elemento de forma eficiente}
+>>> frutas
+{'banana': 12.5, 'laranja': 1.5, 'uva': 1.2}
+
+```
+Como são parecidos com conjuntos, os casos onde dicionários não devem ser usados são parecidos, confira a seguir.
+
+#### Quando não usar dicionários
+
+Dicionários não são ordenados em muitas linguagens. Por isso não permite acesso por índice. 
+Por isso devem ser evitados em problemas de acesso a elementos contíguos ou com ordenação. Confira:
+
+```python
+>>> frutas ={'banana': 12.50, 'laranja': 1.50, 'uva': 1.20}
+>>> frutas[0] # Não é possível acessar por índice, retorna erro
+Traceback (most recent call last):
+  ...
+KeyError: 0
+>>> for nome in frutas: print(nome) # Mas é possível iterar por chaves de forma eficiente
+banana
+laranja
+uva
+>>> for preco in frutas.values(): print(preco) # Também possível iterar por valores de forma eficiente
+12.5
+1.5
+1.2
+>>> for nome,preco in frutas.items(): print(nome, preco) # Também útil iterar por chave e valor de forma eficiente
+banana 12.5
+laranja 1.5
+uva 1.2
+
+```
+
+Assim se encerram as estruturas de dados lineares necessárias para se resolver 99% das questões de entrevistas técnicas.
+
+### Conclusão sobre estruturas de dados lineares
+
+Conhecer as quatro estruturas de dados lineares elementares é fundamental para passar na entrevista técnicas de processos seletivos para devs.
+Saber escolher a estrutura de dados mais adequada para um problema é essencial para demostrar conhecimento dos fundamentos.
+E esse conhecimento já deve fazer o profissional passar em várias entrevistas para empresas médias e pequenas.
+
+Agora se você pretende trabalhar em grandes empresas, principalmente as do exterior e ou americanas, como Google e Facebook, você vai precisar ir além.
+Você vai precisar conhecer e análisar seus algorítmos do ponto de vista de complexidade em tempo de execução e memória.
+Veja o resumo desse assunto na próxima seção.
 
 
