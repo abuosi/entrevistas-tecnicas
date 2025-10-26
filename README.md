@@ -113,4 +113,44 @@ deque([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 ```
 
+#### Quando Lista Duplamente Ligada (Double Linked List - Dequeue)
+A lista duplamente ligada não é eficiente para acesso a elementos próximos ao seu meio. Para esses casos, melhor usar listas.
+
+```python
+>>> from collections import deque
+>>> lista = deque(range(1, 10))  # Criação da lista
+>>> lista[4] # Acesso a elemento do meio de forma ineficiente. Quando maior a lista, mais tempo demora
+5
+
+```
+
+Por fim, existe uma operação ineficiente para listas duplamente ligadas e listas comuns, confira a seguir.
+
+### Quando não usar Lista comum ou Duplamente Ligada
+
+Ambos listas, a comum e a duplamente ligada, são ineficiente para a operação de pertencimento. 
+Ou seja, para chegar se um elemento está contido nela ou não. Confira a seguir:
+
+```python
+>>> from collections import deque
+>>> d = deque(range(1, 10))  # Criação da lista duplamente ligada
+>>> d # Lista com 9 elementos contíguos
+deque([1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> 9 in d # operação ineficiente de elemento que está contido na lista
+True
+>>> 10 in d # operação ineficiente de elemento que não está contido na lista
+False
+>>> lista = list(d)  # Criação da lista simples
+>>> lista # Lista com 9 elementos contíguos
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> 9 in lista # operação ineficiente de elemento que está contido na lista
+True
+>>> 10 in lista # operação ineficiente de elemento que não está contido na lista
+False
+
+```
+
+É muito comum existerem problemas onde é necessário manter a memória de passos já realizados. Para esses casos, deve se
+evitar usar listas. Nesse caso, melhor usar conjuntos, confira a seguir
+
 
