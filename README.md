@@ -128,7 +128,7 @@ Por fim, existe uma operação ineficiente para listas duplamente ligadas e list
 
 #### Quando não usar Lista comum ou Duplamente Ligada
 
-Ambos listas, a comum e a duplamente ligada, são ineficiente para a operação de pertencimento. 
+Ambas listas, a comum e a duplamente ligada, são ineficientes para a operação de pertencimento. 
 Ou seja, para chegar se um elemento está contido nela ou não. Confira a seguir:
 
 ```python
@@ -273,7 +273,102 @@ Saber escolher a estrutura de dados mais adequada para um problema é essencial 
 E esse conhecimento já deve fazer o profissional passar em várias entrevistas para empresas médias e pequenas.
 
 Agora se você pretende trabalhar em grandes empresas, principalmente as do exterior e ou americanas, como Google e Facebook, você vai precisar ir além.
-Você vai precisar conhecer e análisar seus algorítmos do ponto de vista de complexidade em tempo de execução e memória.
+Você vai precisar conhecer e analisar seus algorítmos do ponto de vista de complexidade em tempo de execução e memória.
 Veja o resumo desse assunto na próxima seção.
+
+## Análise e Complexidade de Algoritmos
+
+Análise de complexidade de tempo de execução e uso de memória é uma matéria de faculdade que muitas vezes só e visa na pós graduação, no Brasil.
+Contudo essa matéria é dada na graduação das faculdades americanas e saber fazer essa análise é indipensável para quem quer fazer processos seletivos de empresas grande, como Google e Facebook.
+
+Você não precisa ter um conhecimento profundo, mas precisa conseguir fazer essa análise de rapidamente e visualmente na hora do processo seletivo.
+
+Além disso, precisa saber usar a análise para tentar buscar soluções eficientes. 
+A heurística que funciona é:
+
+1. Valide que entendeu os requistos dos problemas, incluindo natureza de entradas e saídas dos programas
+2. Faça a solução mais simples possível, mesmo que ineficiente. Não resolver é pior que implementar solução ineficiente.
+3. Analise a complexidade da solução
+4. Verifique como melhorar a perfomance, como por exemplo, ordenar as entradas do programa.
+5. Impĺemente a melhora de perfomance proposta.
+
+Então, para poder fazer essa análise e heurística, você precisa:
+
+1. Saber as 7 principais funções de análise e complexidade
+2. Saber comparar cada uma dessas funções em termos de peformance
+3. Saber a complexidade das operações das estruturas lineares
+4. Conhecer e saber a complexidade dos algorítmos clássicos de soluções de problemas
+
+Vamos então detalhar cada um desses pontos.
+
+### As 7 funções de análise e complexidade de algorítmos
+
+Em análise e complexidade de algorítmos usando se usa a notação [Big O](https://en.wikipedia.org/wiki/Big_O_notation) para expressar a evolução do tempo de execução e uso de memória de algoritmos.
+Você só precisa conhecer 7 dessas funções
+
+#### 1. O(1) - Constante
+
+ALgorítmos de tempo de constante são aqueles em que tempo de execução e memória independem do tamnho da entrada.
+Ou seja, mesmo para uma lista grande de elementos, o algorítmo vai demorar sempre o mesmo tempo para executar.
+Esse tipo de algorítmo é o mais eficiente que existe, mas normalmente apenas problemas muito simples permitem solução constante.
+Segue uma tabela com as principais operações de tempo constante:
+
+| Categoria             | Operação | Descrição | Exemplo                             |
+|-----------------------|----------|-----------|-------------------------------------|
+| **Operações Básicas** | Atribuição de variável | Armazenar valor em variável | `x = 5`                             |
+| **Operações Básicas** | Operações aritméticas | Soma, subtração, multiplicação, divisão | `a + b`, `x - y`, `m * n`, `p / q`  |
+| **Operações Básicas** | Operações lógicas | AND, OR, NOT, comparações | `a and b`, `x > y`, `not flag`      |
+| **Operações Básicas** | Acesso a atributo | Acessar propriedade de objeto | `obj.propriedade`                   |
+| **Lista (List)**      | Acesso por índice | Ler elemento em posição específica | `lista[0]`, `lista[5]`, `lista[-1]` |
+| **Lista (List)**      | Modificação por índice | Alterar elemento em posição específica | `lista[1] = -1`                     |
+| **Lista (List)**      | Adicionar ao final | Inserir elemento no fim da lista | `lista.append(10)`                  |
+| **Lista (List)**      | Remover do final | Retirar último elemento | `lista.pop()`                       |
+| **Lista (List)**      | Obter tamanho | Quantidade de elementos | `len(lista)`                        |
+| **Deque**             | Adicionar ao final | Inserir elemento no fim | `deque.append(9)`                   |
+| **Deque**             | Remover do final | Retirar último elemento | `deque.pop()`                       |
+| **Deque**             | Adicionar ao início | Inserir elemento no começo | `deque.appendleft(1)`               |
+| **Deque**             | Remover do início | Retirar primeiro elemento | `deque.popleft()`                   |
+| **Deque**             | Obter tamanho  | Quantidade de elementos | `len(deque)`                        |
+| **Set**               | Adicionar elemento | Inserir novo elemento | `conjunto.add(1)`                   |
+| **Set**               | Remover elemento | Retirar elemento específico | `conjunto.remove(1)`                |
+| **Set**               | Verificar pertencimento | Checar se elemento existe | `1 in conjunto`                     |
+| **Set**               | Obter tamanho  | Quantidade de elementos | `len(conjunto)`                     |
+| **Dict**              | Acesso por chave | Obter valor associado à chave | `dict['chave']`                     |
+| **Dict**              | Modificação por chave | Alterar valor de chave existente | `dict['chave'] = novo_valor`        |
+| **Dict**              | Adicionar par chave-valor | Inserir nova entrada | `dict['nova_chave'] = valor`        |
+| **Dict**              | Remover por chave | Excluir entrada específica | `del dict['chave']`                 |
+| **Dict**              | Verificar existência de chave | Checar se chave existe | `'chave' in dict`                   |
+| **Dict**              | Obter tamanho  | Quantidade de elementos | `len(dct)`                          |
+
+Portanto você deverá ser capaz de identificar as operações de tempo constante de seu algoritmo e procurar usar as estruturas de dados lineares mais adequadas, buscando operações constantes sempre que possível.
+Quando não for possível, procurar usar a próxima solução mais eficinte, que é a logarítimica. Confira a seguir
+
+#### 2. O(log n) - Logarítmico
+
+Os algorítmos logarítimcos são os mais eficientes depois dos constantes. 
+Normalmente são logarítimocos os algorítmos que conseguem dividir a entrada em duas partes e, a partir de uma condição, eliminar uma das metades como possível solução.
+O mais clássico algoritimo em complexidade logaritímica é a [Busca Binária](https://en.wikipedia.org/wiki/Binary_search).
+
+Conhecer esse algorítmo é importante para poder buscar soluções com eficiencia e até validar com o entrevistador se as condições para usar o algoritmo estão presentes.
+Por exemplo, se a entrada for uma lista de números, você pode perguntar se ela está ordenada para já poder efetuar uma busca binária.
+Você pode ser pedido para implementar o algoritmo de busca binária. 
+Ou então pode usar implementação da linguagem que estiver usando, pois a maioria vai oferecer a solução pronta.
+E aí vc vai considerar a complexidade log n do algorítmo.
+
+Exemplo em Python
+
+```python
+>>> from bisect import bisect_left, bisect_right
+>>> lista= list(range(1, 20, 3))
+>>> lista
+[1, 4, 7, 10, 13, 16, 19]
+>>> bisect_left(lista, 10) # onde inserir o 10, na posição mais a esquerda, para manter a lista ordenada, custo O(log n)
+3
+>>> bisect_right(lista, 10) # onde inserir o 10, na posição mais a direita, para manter a lista ordenada, custo O(log n)
+4
+
+```
+
+
 
 
