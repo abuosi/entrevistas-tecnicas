@@ -1,5 +1,7 @@
-# entrevistas-tecnicas
+# Entrevistas Técnicas de Processos seletivos
+
 Resumo de conhecimento essencial e obrigatório para arrasar em entrevistas técnicas
+
 
 ## Motivação
 
@@ -538,7 +540,7 @@ Isso significa que se um computador executasse 1 operação por segundo desde a 
 
 Para ter uma ideia visual da discrepância entre as funções, veja o gráfico abaixo gerado pelo script `plot_complexity.py`:
 
-![Gráfico de Complexidades](complexity_chart.png)
+![Gráfico de Complexidades](./complexity_chart.png)
 
 O gráfico usa escala logarítmica no eixo Y para poder visualizar todas as funções no mesmo gráfico, já que O(2^n) cresce tão rapidamente que tornaria as outras funções invisíveis em escala linear.
 
@@ -573,7 +575,8 @@ Google, Facebook, Red Hat e Quinto Andar. [Nesse repositório](https://github.co
 4. Se tiver dominio de várias linguagens, escolha a de mais alto nível em que se escreva pouco, por isso Renzo sempre escolhe Python ;)
 
 5. Escreva testes para validar seu entendimento de entrada e saída. Pode ser em formato de comentári. Essa é outra razão para Renzo escolher Python. É possível executar comentários e até documentação em formato de doctest!
-Por exemplo, todo código dessa página é executado  e validado com o compando `python -m doctest README.md`, inclusive no CI desse repositório.
+Por exemplo, todo código dessa página é executado  e validado com o compando `python -m doctest README.md`, inclusive no 
+[![Doctest README.md](https://github.com/codigofontetv/entrevistas-tecnicas/actions/workflows/doctest.yml/badge.svg)](https://github.com/codigofontetv/entrevistas-tecnicas/actions/workflows/doctest.yml) desse repositório.
 
 Então é isso, desejamos bons estudos e muitas aprovações nas entrevistas técncias!
 
