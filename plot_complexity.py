@@ -61,8 +61,8 @@ plt.annotate('Funções eficientes\n(O(1), O(log n), O(n))',
 
 # Ajustar layout e salvar
 plt.tight_layout()
-plt.savefig('complexity_chart.jpg', dpi=300, bbox_inches='tight', 
-            facecolor='white', edgecolor='none')
+plt.savefig('complexity_chart.jpg', format='jpeg', dpi=300, bbox_inches='tight', 
+            facecolor='white')
 plt.show()
 
 print("Gráfico salvo como 'complexity_chart.jpg'")
