@@ -369,6 +369,216 @@ Exemplo em Python
 
 ```
 
+Mas algumas vezes não é possĩvel chegar em algorítmicos logaritimicos.
+Isso acontece quando existe a necessidade de iterar por todos elementos da lista da entrada.
+Nesse caso, a solução mais eficiente é a liner, confira a seguir.
+
+#### 3. O(n) - Linear
+
+Algorítimos linears normalmente exigem a iteração em todos elementos da entrada, por isso o tempo de execução fica proporcional ao tamanho da entrada.
+
+Dentre as estruturas de dados lineares mencionadas, as seguintes operações são lineares, além de outras operaçoes básicas:
+
+| Categoria             | Operação | Descrição | Exemplo                             |
+|-----------------------|----------|-----------|-------------------------------------|
+| **Operações Gerais**  | Iteração completa | Percorrer todos os elementos | `for x in lista`, `for x in conjunto` |
+| **Operações Gerais**  | Conversão para lista | Transformar estrutura em lista | `list(conjunto)`, `list(dict.keys())` |
+| **Operações Gerais**  | Conversão para string | Transformar estrutura em string | `str(lista)`, `' '.join(lista)` |
+| **Lista (List)**      | Verificar pertencimento | Checar se elemento existe | `x in lista`, `elemento in lista` |
+| **Lista (List)**      | Buscar índice | Encontrar posição de elemento | `lista.index(elemento)` |
+| **Lista (List)**      | Contar ocorrências | Quantas vezes elemento aparece | `lista.count(elemento)` |
+| **Lista (List)**      | Inserir no início/meio | Adicionar elemento em posição específica | `lista.insert(0, elemento)` |
+| **Lista (List)**      | Remover do início/meio | Retirar elemento de posição específica | `lista.pop(0)`, `lista.remove(elemento)` |
+| **Lista (List)**      | Encontrar mínimo | Menor elemento da lista | `min(lista)` |
+| **Lista (List)**      | Encontrar máximo | Maior elemento da lista | `max(lista)` |
+| **Lista (List)**      | Somar elementos | Soma de todos os elementos | `sum(lista)` |
+| **Lista (List)**      | Reverter | Inverter ordem dos elementos | `lista.reverse()`, `lista[::-1]` |
+| **Deque**             | Verificar pertencimento | Checar se elemento existe | `x in deque` |
+| **Deque**             | Acesso por índice (meio) | Acessar elemento no meio | `deque[len(deque)//2]` |
+| **Deque**             | Inserir no meio | Adicionar elemento em posição específica | `deque.insert(pos, elemento)` |
+| **Deque**             | Remover do meio | Retirar elemento de posição específica | `deque.remove(elemento)` |
+| **Deque**             | Encontrar mínimo | Menor elemento do deque | `min(deque)` |
+| **Deque**             | Encontrar máximo | Maior elemento do deque | `max(deque)` |
+| **Set**               | Iteração completa | Percorrer todos os elementos | `for elemento in conjunto` |
+| **Set**               | Encontrar mínimo | Menor elemento do conjunto | `min(conjunto)` |
+| **Set**               | Encontrar máximo | Maior elemento do conjunto | `max(conjunto)` |
+| **Set**               | Operações de conjunto | União, interseção, diferença | `set1.union(set2)`, `set1.intersection(set2)` |
+| **Dict**              | Iteração por chaves | Percorrer todas as chaves | `for chave in dict` |
+| **Dict**              | Iteração por valores | Percorrer todos os valores | `for valor in dict.values()` |
+| **Dict**              | Iteração por pares | Percorrer chaves e valores | `for chave, valor in dict.items()` |
+| **Dict**              | Verificar valor | Buscar se valor existe | `valor in dict.values()` |
+| **Dict**              | Encontrar chave por valor | Buscar chave que possui determinado valor | `[k for k, v in dict.items() if v == valor]` |
+| **Dict**              | Encontrar mínimo/máximo | Menor/maior valor ou chave | `min(dict.values())`, `max(dict.keys())` |
+
+Aqui fica claro o que já foi mencionado na descrição das estruturas lineares: escolher a estrutura correta ou não pode ser a diferença fundamental na performance de algorímo.
+Veja que se usar uma lista, usar a operação de pertencimento vai levar tempo proporcional ao tamanho da entrada, equanto usar conjunto vai levar a tempo constante.
+
+Justamente a análise de complexidade permite a comparação de algoritmos em termos de tempo de execução e uso de memória.
+
+** Curiosidade  do mundo real ** Os índices usados em banco de dados normalmente usam estruturas de dados que justamente permitem
+buscas em tempo logoritimico através de busca binária. Um exemplo é o índice [B-Tree](https://en.wikipedia.org/wiki/B-tree). 
+Sem índices a busca fica linear, ou seja, toda a tabela precisa ser percorrida, que se chama de "Full Table Scan".
+Mas por outro lado a inserção e remoção de linhas na tabela piora. Sem índice essas operações podem ser feitas em O(1).
+Mas com índice existe o custo de inserção e remoção de elementos no índice, que custam log n. 
+
+Algorítmos lineares ainda são eficazes, mas nem sempre é possĩvel atingir esse tipo de performance.
+O próximo nivel em termos de função é chamado sublinear, confira a seguir:
+
+#### 4. O(n log n) - Sublinear
+
+Algorítmos sublineares possuem tempo de execução dado por n log n. 
+Eles possuem esse nome por conta da complexidade ser ligeirament pior que os lieanres,
+mas ainda bem melhores que os quadráticos.
+Os mais clássicos algoritmos sublineares que você precisa você precisa conhecer são os de ordenção complexos,
+como Merge Sort e Quick Sort.
+
+E as melhores soluções gerais de ordenação possuem essa complexidade.
+É raro se pedir para você implementar os algoritmos na entrevista, mas é fundamental você saber que esse é o custo a se pagar
+se você precisar ordenar uma lista de n elementos usando a biblioteca padrão da linguagem.
+Algumas vezes vai compensar pagar esse custo, se for diminuir a complexidade geral do algoritmo.
+Mas algumas vezes não vai compensar. Examplo disso é o cáculo do máximo elemento.
+
+Se usar a função max, já vimos que o custo é linear:
+
+```python
+>>> lista = [3, 2, 5, 7, 19]
+>>> max(lista)  # O(n)
+19
+
+```
+
+Então usar ordenação vai piorar a complexidade do algorítmo, apesar de deixar a solução mais simples que implementar max manulamente:
+
+```python
+>>> lista = [3, 2, 5, 7, 19] #
+>>> lista.sort() # O(n log n)
+>>> lista
+[2, 3, 5, 7, 19]
+>>> lista[-1]  # O(1)
+19
+
+```
+
+Contudo, se fosse uma primeira solução em vez de se implementar manualmente o algorítmo max, seria válido para demosntrar conhecimento e foco na resolução do problema, antes de pensar em performance.
+
+Depois da complexidade sublinear temos a quadráticas em termos de ordem de complexidade. COnfira na próxima seção.
+
+#### 5. O(n^2) - Quadrática
+
+Algorítimos quadráticos acontecem normalmnte quando temos dois laços aninhados para executar uma operação.
+Se encaixam aqui os algorítmos de ordençaõ simples, como Selection, Insertion e Buble Sort.
+Costumam ocorrer também em operações em matrizes quadradas, como soma e subtração.
+
+Quando uma solução for quadrática vale sempre a pena estudar se a ordenação das entradas dos programa diminuiria a complexidade geral do algoritmo.
+Ou seja, nos casos da funçao quadráticas e das duas que vão se seguir, pagar o custo da ordenação compensa
+se a complexidade geral do algorítmo mudar para sublinear.
+
+Para expoentes da função iguais ou maiores que dois, dizemos que essa é categoria geral de complexidade polinomial.
+Contudo não é comum encontrarmos problemas de complexidade polinomial maior que 3.
+
+Por isso é suficiente conhecer a quadrática e a cúbica, explicada a seguir.
+
+
+#### 6. O(n^3) - Cúbica
+
+Algorítimos cúbicos acontecem normalmnte quando temos 3 laços aninhados para executar uma operação.
+Se encaixam operações em matrizes com 3 dimensões. 
+Ainda assim, esse tipo de problema com 3 dimensões são raros em processos seletivos. 
+Normalmente caem mais problemas com matrizes de duas dimesões.
+
+Por isso não precisamos nos aprofundar nessa função. Assim, só fica faltando tratar da ṹltima função, a exponencial, confira a seguir.
+
+#### 7. O(2^n) - Exponencial
+
+Algorítmos exponenciais possuem a pior complexidade que existe. 
+Normalmente com um pequeno aumento no tamanho da entrada o tempo de execução e/ou consumo de memória são tão grandes que não possível se chegar em uma solução.
+
+Se enquadram aqui problemas de definição recursiva implementados de forma inocente, como o calculo da sequencia de Fibonacci.
+
+Problemas de explosão combinatorial também tem essa mesma característica, como listar as permutações possíveis de um conjunto.
+
+Justamente por isso é tão importante para empresas grande cobrarem esse assunto em um processo seletivo.
+Quando se atinge escala, permance pasta ser uma questão de viabilidade, não apenas um requisito não funcional.
+
+Por fim, é importante você saber as ordens de grandeza ao comparar complexidades de algoritmos.
+Pos isso apresentamos todas funções e suas comparações na próxima seção.
+
+### Comparação das 7 principais funções de análise de complexidade
+
+Confira a ordem de magninute do aumento da saida quando aumetamos a entrada n de um algorítmo, de acordo com sua complexidade:
+
+| n | O(1) | O(log n) | O(n) | O(n log n) | O(n²) | O(n³) | O(2^n) |
+|---|------|----------|------|------------|-------|-------|--------|
+| 8 | 1 | 3 | 8 | 24 | 64 | 512 | 256 |
+| 16 | 1 | 4 | 16 | 64 | 256 | 4.096 | 65.536 |
+| 32 | 1 | 5 | 32 | 160 | 1.024 | 32.768 | 4.294.967.296 |
+| 64 | 1 | 6 | 64 | 384 | 4.096 | 262.144 | 18.446.744.073.709.551.616 |
+| 128 | 1 | 7 | 128 | 896 | 16.384 | 2.097.152 | ~3,4 × 10³⁸ |
+| 256 | 1 | 8 | 256 | 2.048 | 65.536 | 16.777.216 | ~1,2 × 10⁷⁷ |
+| 512 | 1 | 9 | 512 | 4.608 | 262.144 | 134.217.728 | ~1,3 × 10¹⁵⁴ |
+
+**Observações importantes:**
+- **O(1)**: Sempre constante, independente do tamanho de n
+- **O(log n)**: Usando logaritmo base 2, cresce muito lentamente. É mais parecido com O(1) que O(n).
+- **O(n)**: Cresce linearmente com n
+- **O(n log n)**: Cresce um pouco mais rápido que linear. È mais parecida com a liner do que com a quadrática.
+- **O(n²)**: Cresce rapidamente de forma quadrática
+- **O(n³)**: Cresce muito rapidamente de forma cúbica
+- **O(2^n)**: Cresce exponencialmente - torna-se impraticável muito rapidamente
+
+**🌍 Perspectiva Astronômica da Complexidade Exponencial:**
+
+Para entender o quão dramático é o crescimento exponencial, considere que o valor `18.446.744.073.709.551.616` (resultado de 2^64) representa:
+
+- **Em segundos**: 584,5 bilhões de anos
+- **Comparado à idade da Terra** (4,54 bilhões de anos): **129 vezes maior!**
+- **Comparado à idade do Universo** (13,8 bilhões de anos): **42 vezes maior!**
+
+Isso significa que se um computador executasse 1 operação por segundo desde a formação da Terra, ele ainda precisaria de **mais 128 "Terras" de tempo** para completar um algoritmo O(2^64)!
+
+Para ter uma ideia visual da discrepância entre as funções, veja o gráfico abaixo gerado pelo script `plot_complexity.py`:
+
+![Gráfico de Complexidades](complexity_chart.png)
+
+O gráfico usa escala logarítmica no eixo Y para poder visualizar todas as funções no mesmo gráfico, já que O(2^n) cresce tão rapidamente que tornaria as outras funções invisíveis em escala linear.
+
+**Como interpretar o gráfico:**
+- As linhas mais horizontais (O(1) e O(log n)) representam os algoritmos mais eficientes
+- A linha diagonal suave (O(n)) mostra crescimento linear controlado  
+- A linha um pouco mais inclinada (O(n log n)) ainda é aceitável para a maioria dos casos
+- As linhas curvas (O(n²) e O(n³)) mostram crescimento polinomial preocupante
+- A linha exponencial (O(2^n)) mostra crescimento explosivo e impraticável
+
+Assim se encerra a parte conceitual obrigatória para preparação para a fase de entrevista técnica.
+Mas só conhecer essa base teórica não é suficiente. Por isso segue estratégia para se preparar na próxima seção;
+
+## Como se prepara para a entrevista técnica
+
+A recomendação é você criar um repositório para resolver problemas. 
+A ideia é treinar o conhecimento e aumentar seu repertório de soluções.
+Fazendo isso, normalmente você irá encontrar questões que já fez ou que são muito parecidas com exercícios.
+
+Para isso, remenda-se fazer o máximo de exercicios do [Leetcode](https://leetcode.com/problemset/). 
+Fazendo ao menos os 30 primeiros já garante uma boa preparação Renzo, um dos colabores desse repositório, passou na entrevista técnica para grande empresas:
+Google, Facebook, Red Hat e Quinto Andar. [Nesse repositório](https://github.com/renzon/code_interview_training) ele concentra soluções para problemas do Leetcode e outros.
+
+### Dicas finais
+
+1. Escolha, se o processo permitir, a linguagem de programação que você mais conhece.
+
+2. Busque validar as entradas e escrever testes, mesmo que em formato de comentários de código.
+
+3. Debug mentalmente seu código, acrescentando valores de variáveis e sua evolução em comentários do código
+
+4. Se tiver dominio de várias linguagens, escolha a de mais alto nível em que se escreva pouco, por isso Renzo sempre escolhe Python ;)
+
+5. Escreva testes para validar seu entendimento de entrada e saída. Pode ser em formato de comentári. Essa é outra razão para Renzo escolher Python. É possível executar comentários e até documentação em formato de doctest!
+Por exemplo, todo código dessa página é executado  e validado com o compando `python -m doctest README.md`, inclusive no CI desse repositório.
+
+Então é isso, desejamos bons estudos e muitas aprovações nas entrevistas técncias!
+
+
+
 
 
 
